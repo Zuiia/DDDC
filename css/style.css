@@ -131,8 +131,7 @@ div .logo {
 .disclaimer {
     margin-left: 50px;
     margin-right: 50px;
-    padding: 40px;
-    padding-bottom: 0;
+    padding: 40px 40px 0;
     background: rgb(255, 203, 249);
     border: 4px solid rgb(255, 175, 239);
     border-radius: 5px;
