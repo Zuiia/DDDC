@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'RifficFree-Bold'; /*a name to be used later*/
+    src: url("../source/fonts/RifficFree-Bold.ttf"); /*URL to font*/
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-image: url("../source/images/BG.png");
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+}
+
+.content {
+    width:100%;
+    background: white;
+    height: inherit;
+    box-shadow: 0 0 15px lightgray;
+}
+
+.logo {
+    display: none;
+    z-index: 10;
+}
+
+.download {
+    display: none;
+}
+
+@media only screen and (min-width: 830px) {
+    .wrapper, .bar {
+        width: 830px;
+        margin:0 auto;
+    }
+    .logo {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1070px) {
+    .wrapper, .bar {
+        width:1070px;
+        margin:0 auto;
+        position:relative;
+    }
+    .logo {
+        display: block;
+    }
+}
+
+body.force_desktop #main {
+    width:1070px;
+    margin:0 auto;
+    position:relative;
+}
+
+div .logo {
+    position: fixed;
+    top: 0;
+    left: 280px;
+    height: 256px;
+    width: auto;
+}
+
+.bar {
+    position: fixed;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Comic Sans MS", sans-serif;
+    background-color: rgb(255, 203, 249);
+    z-index: 9;
+}
+
+.content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.video {
+    position: relative;
+    /* ratio 16x9 */
+    padding-bottom: 56.25%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.divider {
+    position: relative;
+    background-color: rgb(255, 203, 249);
+    height: 50px;
+}
+
+.cute {
+    height: 500px;
+}
+
+.girls {
+    background: url("../source/images/increadibly_cute_girls.png") no-repeat top;
+    position: relative;
+    height: 742px;
+    top: -70px;
+    display: block;
+}
+
+.description,
+.download{
+    background: white;
+    position: relative;
+    padding: 50px;
+}
+
+.description h1 {
+    text-align: center;
+}
+
+.disclaimer {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 40px;
+    padding-bottom: 0;
+    background: rgb(255, 203, 249);
+    border: 4px solid rgb(255, 175, 239);
+    border-radius: 5px;
+}
+
+.ok {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20%;
+}
+
+.footer {
+    margin: unset;
+    position: relative;
+    height: 50px;
+    background: black;
+}

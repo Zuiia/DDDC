@@ -1,0 +1,14 @@
+{
+  "name": "doki",
+  "version": "1.0.0",
+  "description": "Website for the Doki Doki Date Club",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.3.0"
+  }
+}
