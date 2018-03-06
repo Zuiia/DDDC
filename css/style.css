@@ -215,6 +215,11 @@ body.force_desktop #main {
     font-family: Aller_Rg;
 }
 
+.names {
+    text-align: left;
+    margin-left: 150px;
+}
+
 .useful {
     float: right;
     width: 598px;
