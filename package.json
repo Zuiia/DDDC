@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/jquery": "^3.3.0"
+    "@types/jquery": "^3.3.0",
+    "lightbox2": "^2.10.0"
   }
 }
