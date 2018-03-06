@@ -1,4 +1,19 @@
 @font-face {
+    font-family: 'Halogen'; /*a name to be used later*/
+    src: url("../source/fonts/Halogen.ttf"); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Vera'; /*a name to be used later*/
+    src: url("../source/fonts/Vera.ttf"); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Aller_Rg'; /*a name to be used later*/
+    src: url("../source/fonts/Aller_Rg.ttf"); /*URL to font*/
+}
+
+@font-face {
     font-family: 'RifficFree-Bold'; /*a name to be used later*/
     src: url("../source/fonts/RifficFree-Bold.ttf"); /*URL to font*/
 }
@@ -6,7 +21,7 @@
 body {
     position: relative;
     height: 100vh;
-    background-image: url("../source/images/BG.png");
+    background: url("../source/images/BG.png") repeat fixed;
 }
 
 .wrapper{
@@ -24,14 +39,17 @@ body {
 .logo {
     display: none;
     z-index: 10;
+    -webkit-filter: drop-shadow(0 0 25px lightgray);
+    filter: drop-shadow(0 0 5px lightgray);
 }
 
+.disclaimer2,
 .download {
     display: none;
 }
 
 @media only screen and (min-width: 830px) {
-    .wrapper, .bar {
+    .wrapper, .bar, .footer-container {
         width: 830px;
         margin:0 auto;
     }
@@ -40,9 +58,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 1070px) {
-    .wrapper, .bar {
-        width:1070px;
+@media only screen and (min-width: 1200px) {
+    .wrapper, .bar, .footer-container {
+        width:1200px;
         margin:0 auto;
         position:relative;
     }
@@ -52,7 +70,7 @@ body {
 }
 
 body.force_desktop #main {
-    width:1070px;
+    width:1200px;
     margin:0 auto;
     position:relative;
 }
@@ -60,7 +78,7 @@ body.force_desktop #main {
 div .logo {
     position: fixed;
     top: 0;
-    left: 280px;
+    left: 220px;
     height: 256px;
     width: auto;
 }
@@ -69,9 +87,12 @@ div .logo {
     position: fixed;
     text-align: center;
     font-size: 50px;
-    font-family: "Comic Sans MS", sans-serif;
-    background-color: rgb(255, 203, 249);
+    font-family: RifficFree-Bold;
+    color: white;
+    -webkit-text-stroke: 4px darkmagenta;
+    background-color: rgb(255, 230, 250);
     z-index: 9;
+    box-shadow: 0 0 15px lightgray;
 }
 
 .content {
@@ -101,7 +122,7 @@ div .logo {
 
 .divider {
     position: relative;
-    background-color: rgb(255, 203, 249);
+    background-color: rgb(255, 230, 250);
     height: 50px;
 }
 
@@ -117,30 +138,48 @@ div .logo {
     display: block;
 }
 
-.description,
-.download{
+.description {
     background: white;
     position: relative;
-    padding: 50px;
+    padding: 20px 100px 50px 100px;
+    font-family: Halogen;
+    font-size: 20px;
 }
 
 .description h1 {
     text-align: center;
+    font-family: Halogen;
 }
 
-.disclaimer {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 40px 40px 0;
-    background: rgb(255, 203, 249);
-    border: 4px solid rgb(255, 175, 239);
-    border-radius: 5px;
+.disclaimer1,
+.disclaimer2,
+.download{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 40px;
+    padding: 20px 40px 0;
+    background: rgb(255, 230, 250);
+    border: 4px solid rgb(247, 191, 221);
+    font-family: Aller_Rg;
+    font-size: 20px;
+    text-align: center;
 }
 
-.ok {
-    margin-left: auto;
-    margin-right: auto;
+.ok1,
+.ok2,
+.btn_download {
+    margin: 10px auto;
     display: block;
+}
+
+.ok1,
+.ok2 {
+    width: 8%;
+}
+
+.btn_download {
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 20%;
 }
 
@@ -149,4 +188,37 @@ div .logo {
     position: relative;
     height: 50px;
     background: black;
+}
+
+.footer-container {
+    height: inherit;
+}
+
+.stuff {
+    min-height: 700px;
+}
+
+.credits {
+    padding: 20px;
+    float: left;
+    width: 50%;
+    border-right: 2px solid rgb(247, 191, 221);
+    text-align: center;
+    font-family: Aller_Rg;
+}
+
+.useful {
+    padding: 20px;
+    float: right;
+    width: 50%;
+}
+
+.team_logo {
+    height: 100%;
+}
+
+.yt_logo {
+    float: right;
+    height:90%;
+    margin-top: 3px;
 }
