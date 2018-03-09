@@ -249,13 +249,13 @@ body.force_desktop #main {
 }
 
 a:visited {
-    color: darkmagenta;
+    color: rgb(137, 0, 116);
 }
 
 a:link {
-    color: rgb(155, 69, 125);
+    color: rgb(231, 105, 187);
 }
 
 a:hover {
-    color: grey;
+    color: rgb(225, 145, 197);
 }
