@@ -62,8 +62,8 @@ body {
 .logo {
     position: absolute;
     top: 0;
-    left: -100px;
-    height: 200px;
+    left: 0;
+    height: 50px;
     width: auto;
     z-index: 200;
 }
@@ -74,6 +74,10 @@ body {
         margin:0 auto;
         position: relative;
     }
+    .logo {
+        left: -100px;
+        height: 200px;
+    }
 }
 
 @media only screen and (min-width: 1420px) {
@@ -81,6 +85,10 @@ body {
         width:1200px;
         margin:0 auto;
         position:relative;
+    }
+    .logo {
+        left: -100px;
+        height: 200px;
     }
 }
 
