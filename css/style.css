@@ -18,6 +18,18 @@
     src: url("../source/fonts/RifficFree-Bold.ttf"); /*URL to font*/
 }
 
+a:visited {
+    color: rgb(137, 0, 116);
+}
+
+a:link {
+    color: rgb(231, 105, 187);
+}
+
+a:hover {
+    color: rgb(225, 145, 197);
+}
+
 body {
     position: relative;
     margin: 0;
@@ -28,19 +40,18 @@ body {
 
 .wrapper{
     position: relative;
-    width: 100%;
 }
 
 .content {
-    width:100%;
     background: white;
     height: inherit;
     box-shadow: 0 0 25px grey;
 }
 
-.shadowed {
-    webkit-filter: drop-shadow(0 0 25px grey);
-    filter: drop-shadow(0 0 7px grey);
+.header,
+.content,
+.wrapper {
+    width: 100%;
 }
 
 .disclaimer2,
@@ -48,66 +59,73 @@ body {
     display: none;
 }
 
-@media only screen and (min-width: 830px) {
-    .wrapper, .bar, .footer-container {
+.logo {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    height: 200px;
+    width: auto;
+    z-index: 200;
+}
+
+@media only screen and (min-width: 1050px) {
+    .header, .wrapper, .bar, .footer-container {
         width: 830px;
         margin:0 auto;
-    }
-    .logo {
-        display: block;
+        position: relative;
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    .wrapper, .bar, .footer-container {
+@media only screen and (min-width: 1420px) {
+    .header, .wrapper, .bar, .footer-container {
         width:1200px;
         margin:0 auto;
         position:relative;
     }
-    .logo {
-        display: block;
-    }
 }
 
-body.force_desktop #main {
+body.force_desktop {
     width:1200px;
     margin:0 auto;
     position:relative;
 }
 
-.logo {
-    position: absolute;
-    top: 0;
-    left: -128px;
-    height: 256px;
-    width: auto;
-    z-index: 200;
+.titlebar {
+    width: inherit;
+    position: fixed;
+    z-index: 1;
 }
 
 .shadowed {
-    position: absolute;
-    top: 0;
-    left: -128px;
-    height: 256px;
-    width: auto;
+    webkit-filter: drop-shadow(0 0 25px grey);
+    filter: drop-shadow(0 0 7px grey);
     z-index: 100;
 }
 
 .bar {
+    width: inherit;
+}
+
+.bar {
     position: fixed;
-    height: 50px;
     text-align: center;
-    background-color: rgb(255, 230, 250);
     z-index: 150;
     box-shadow: 0 0 25px grey;
 }
-.title {
+
+.title,
+.bar,
+.divider{
     height: 50px;
+}
+
+.bg-pink {
+    background-color: rgb(255, 230, 250);
 }
 
 .content {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 .video {
@@ -132,8 +150,6 @@ body.force_desktop #main {
 
 .divider {
     position: relative;
-    background-color: rgb(255, 230, 250);
-    height: 50px;
 }
 
 .cute {
@@ -158,28 +174,24 @@ body.force_desktop #main {
 
 .description h1 {
     text-align: center;
-    font-family: Halogen;
 }
 
-.disclaimer1,
-.disclaimer2,
-.download{
+.dialogue {
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 40px;
     padding: 20px 40px 0;
-    background: rgb(255, 230, 250);
+    min-height: 220px;
     border: 4px solid rgb(247, 191, 221);
     font-family: Aller_Rg;
     font-size: 20px;
     text-align: center;
 }
 
-.ok1,
-.ok2,
-.btn_download {
+.btn {
     margin: 10px auto;
     display: block;
+    cursor: pointer;
 }
 
 .ok1,
@@ -191,17 +203,6 @@ body.force_desktop #main {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 20%;
-}
-
-.footer {
-    margin: unset;
-    position: relative;
-    height: 50px;
-    background: black;
-}
-
-.footer-container {
-    height: inherit;
 }
 
 .stuff {
@@ -220,7 +221,7 @@ body.force_desktop #main {
 
 .names {
     text-align: left;
-    margin-left: 20%;
+    margin-left: 25%;
 }
 
 .useful {
@@ -230,10 +231,20 @@ body.force_desktop #main {
     font-family: Aller_Rg;
 }
 
-
-
 .preview {
     width: 275px;
+}
+
+.footer {
+    margin: unset;
+    position: relative;
+    height: 50px;
+    background: black;
+}
+
+.footer-container {
+    height: inherit;
+    overflow: hidden;
 }
 
 .team_logo {
@@ -246,16 +257,4 @@ body.force_desktop #main {
     height:90%;
     margin-top: 3px;
     margin-left: 10px;
-}
-
-a:visited {
-    color: rgb(137, 0, 116);
-}
-
-a:link {
-    color: rgb(231, 105, 187);
-}
-
-a:hover {
-    color: rgb(225, 145, 197);
 }
